@@ -17,8 +17,10 @@
     - EX01: entrega em 28/AGO/2022
 - Aula 02 - 28/AGO/2022 - Ponteiros/aritmética-de-ponteiros + Layout-de-memória
 - Aula 03 - 05/SET/2022 - Alocação-de-memória + Github/Lib-frações
-- Aula 04 - 12/SET/2022 - Libs-strings-frações-polinômios + Intro-a-arquivos
-- Aula 05 - 19/SET/2022 -
+- Aula 04 - 12/SET/2022 - Intro-a-arquivos + Libs-strings-frações-polinômios
+    - EX02: entrega em 19/SET/2022, tema: libs de frações e polinômios
+- Aula 05 - 19/SET/2022 - Continuação-de-arquivos
+    - EX03: entrega em 26/SET/2022, tema: myprintf
 - Aula 06 - 26/SET/2022 - Avaliação da I Unidade
 - Aula 07 - 03/OUT/2022 - 
 - Aula 08 - 10/OUT/2022 -
