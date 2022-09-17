@@ -1,0 +1,16 @@
+Olá, 
+
+No Github Classroom, encontra-se a versão final da atividade EX02. 
+
+Os links seguem abaixo:
+Integral : https://classroom.github.com/a/<omitido>
+Noturno  : https://classroom.github.com/a/<omitido>
+
+Ignorem as atividades anteriores. Elas serão completamente removidas 
+em 1 semana. Faça suas cópias, caso tenha submetido código nelas.
+
+Lembrando que informações atualizadas do curso são registradas no repositório:
+https://github.com/aespiral/central-atp-ii-2022
+DICA!! Acione o botão WATCH deste repositório específico para receber notificações
+
+Att.,
