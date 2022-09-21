@@ -100,3 +100,7 @@ Valor de s: 'oi'
 Valor de t: 'oi'
 ```
 Comente a afirmação: "É possível copiar uma string sem recorrer à biblioteca _string_."
+
+5. Representação
+Crie uma função para multiplicar um valor do tipo MYUINT por 10 usando exclusivamente a representação `dec`.
+- `MYUINT* vezes10(MYUINT* v);`
