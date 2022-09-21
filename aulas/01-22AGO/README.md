@@ -188,3 +188,66 @@ Um arquivo texto é caracterizado pela presença de uma variedade mais restrita 
   - 97 a 122, letras minúsculas de 'a' a 'z'
   - Sinais de pontuação espalhados entre as faixas acima
     - 127, o último código, é DEL ou ESC
+
+### Extendidos
+
+- ISO8859
+- Unicode 
+  - UTF-8
+
+## A biblioteca `string` da LibC
+
+- A biblioteca _string_, incluída na LibC, apresenta um conjunto de funções para manipulação de strings.
+- Algumas funções notáveis:
+  - `int strlen(char* s)`
+  - `char* strcpy(str* s1, str* s2)`
+  - `int strcmp(str* s1, str* s2)`
+  - `char* strcat(str* s1, str* s2)`
+- Aplicação:
+```c
+   // ========================================================================
+   char* g = "oi";
+   int tamanho_string = strlen(g);
+   // ========================================================================
+   // Com inteiros, faz-se:
+   int val = 34;
+
+   // Com strings, faz-se:
+   char* str = "oi";
+   // ========================================================================
+   // Com inteiros, faz-se:
+   int a = 62;
+   int b;
+   b = a;
+
+   // Com strings, NÃO FUNCIONA:
+   char* s = "oi";
+   char t[256];
+   t = s; // COPIA APENAS O PONTEIRO , NÃO FAZ A CÓPIAS DOS CARACTERES UM A UM !!
+
+   // Em vez disso, deve-se fazer:
+   char* s2 = "oi";
+   char* t2;
+   strcpy(t, s); // A STRING t RECEBE A CÓPIA CARACTER A CARACTER DE s
+   // ========================================================================
+   int c = 71;
+   int d = 19;
+   if (c == d) {...} 
+   else if (c > d) {...}
+   else if (c < d) {...};
+
+   char* m = "oi";
+   char* n = "hi";
+   if (strcmp(m, n) == 0) {...}          // m == n  seria uma comparação de ponteiros, não dos caracteres
+   else if (strcmp(m,n) > 0) {...}       // m na frente de n na ordem alfabética;  m > n não faz sentido
+   else if (strcmp(m,n) < 0) {...}       // n na frente de m na ordem alfabética
+   // ========================================================================
+   int x = 5;
+   int y = 7;
+   y += x;     // y passa a valer 12
+
+   char* u = "oi";
+   char* v = "!!";
+   strcat(u,v);   // u passa a valer "oi!!"
+
+```
