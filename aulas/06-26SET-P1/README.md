@@ -76,4 +76,26 @@ typedef struct {
    - Quantos valores ao todo são representados?
    - Crie uma função em C para somar dois valores do tipo SMINT
      - `SMINT* soma(SMINT* a, SMINT* b)`
-     
+
+4. Lib _string_
+Considere o seguinte programa:
+```c
+#include <stdio.h>
+int main() {
+    char s[256] = "oi";
+    char* t;
+
+    printf("Valor de s: '%s'\n\n", s);
+
+    t = s;
+
+    printf("Valor de t: '%s'\n", t); 
+}
+``` 
+A execução do programa é mostrada abaixo:
+```
+Valor de s: 'oi'
+
+Valor de t: 'oi'
+```
+Comente a afirmação: "É possível copiar uma string sem recorrer à biblioteca _string_."
