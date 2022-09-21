@@ -41,3 +41,39 @@
    - Explique como é preenchida a representação `hex2display` no código de `myprintf`. Qual pode ser uma aplicação da representação `hex2display`?
    - Explique a frase: "Um caracter é um número como outro qualquer, mas também pode ter aspectos próprios."
    - Considere a situação: "Um programador usa um editor de arquivos binários para alterar dados de um arquivo. Ele decide visualizar os dados usando a representação decimal. Um colega sugere que a representação binária seria mais correta porque os computadores são binários. O programador não responde, apenas ri e pensa para si: 'decimal, hexadecimal, binária: tanto faz!' " Por que o programador está correto em usar a representação que mais lhe convém?
+
+2. Considere a representação `bin` no tipo MYUINT. Ela consiste em um array de 8 posições contendo um valor que pode ser 0 ou 1 (como um `short int`)
+   - Faça um programa que converte um valor em `bin` para a representação nativa da máquina (`arch`), isto é, um único valor
+     - `arch = bin[7]*2^7 + bin[6]*2^6 + ... + bin[1]*2^1 + bin[0]^1`
+     - Essa conversão é a mesma da avaliação de um polinômio em um certo ponto (confira a biblioteca `poli.c`)
+     - Essa conversão pode ser feita de modo a mininizar o número de operações de multiplicação a serem realizadas; a diferença entre os procedimentos é mostrada abaixo para valores de 4 bits
+```
+1101
+Algoritmo 1:
+1*2*2*2 + 1*2*2 + 0*2 + 1
+-> 6 multiplicações
+
+Algoritmo 2:
+((1*2 + 1)*2 + 0)*2 + 1
+-> 3 multiplicações
+
+Algoritmo 2 como execução de um laço passo a passo (caso de 4 bits):
+arch =          bin[3];
+arch = arch*2 + bin[2];
+arch = arch*2 + bin[1];
+arch = arch*2 + bin[0];
+```
+
+3. Representação de números
+   - Considere a representação de números negativos proposta na _struct_ abaixo:
+```c 
+typedef struct {
+  bool sinal;
+  unsigned short int magnitude;
+} SMINT;
+```
+   - Qual a faixa de valores possíveis com essa representação? Considere que o compilador C usa um byte para implementar um valor do tipo `unsigned short int` (modernamente, os compiladores usam 2 bytes)
+   - Quantos valores ao todo são representados?
+   - Crie uma função em C para somar dois valores do tipo SMINT
+     - `SMINT* soma(SMINT* a, SMINT* b)`
+     
