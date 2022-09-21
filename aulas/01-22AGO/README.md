@@ -56,7 +56,7 @@ typedef struct {
        - A separação das casas decimais é feita por meio de divisões sucessivas por 10
        - Em suma, essa representação é uma coleção de três números-na-representação-caixa-preta-da-máquina 
      - A representação `dec` pode ser aplicada em algoritmos em que as casas decimais precisam ser consideradas à parte, como coisas em si
-       - Exemplo: [números de Armstrong[(https://exercism.org/tracks/c/exercises/armstrong-numbers)
+       - Exemplo: [números de Armstrong](https://exercism.org/tracks/c/exercises/armstrong-numbers)
   3. A coleção `dec2display`, de 'casas decimais para exibição em display'
      - Uma característica de números-na-representação-caixa-preta-da-máquina é que eles não são diretamente visualizáveis na tela ou no papel (via impressão) ou legíveis por teclado ou scaneamento
        - Apenas números-na-representação-caixa-preta-da-máquina cujo valor corresponda a um 'desenho' de um caracter na tela, na impressora, no teclado, etc. podem ser exibidos
