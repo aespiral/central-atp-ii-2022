@@ -157,3 +157,34 @@ Vamos aplicar essas regras à análise de situações:
   - Pela Regra dos Desenhos, não temos acesso à realidade do arquivo, à sua representação-na-máquina
     - Considerando o tipo MYCHAR, seria a representação interna `arch`, inacessível
   - Pela Regra da Máquina, um arquivo texto também pode ser manipulado como binário
+
+### Reconhecendo um arquivo texto
+
+Examinando os valores contidos em um arquivo, é possível distinguir um arquivo texto de um arquivo binário em geral.
+
+Um arquivo texto é caracterizado pela presença de uma variedade mais restrita de valores:
+- Há muita ocorrência de bytes entre 97 e 122 (letras minúsculas em ASCII) e 32 (espaço em branco)
+- Há uma relativa ocorrência de valores entre 65 e 90 (letras maiúsculas), e sinais de pontuação
+- Há uma relativa ocorrência de valores como 10 ou 13 (nova linha)
+- Há a **inexistência** de códigos em desuso em ASCII, na faixa de justamente entre 0 e 31 (exceções feitas a 10 e 13 e uns pouquíssimos mais)
+
+## Código de caracteres
+
+### ASCII
+
+- _American Standar Code for Interchange of Information_
+- 7 bits, 128 combinações possíveis, 128 caracteres em potencial
+- Visão geral dos caracteres ( [tabela](https://www.asciitable.com)  )
+  - O código 0 não é usado; em C, é representado como '\0'
+  - Há uma faixa de "caracteres não imprimíveis", isto é, caracteres de controle
+    - 7, _Bell_, "sinal sonoro"; em C: '\a' (de _alert_)
+    - 9, _Tabulation_, "tabulação"; em C: '\t'
+    - 10, _New line_, ou _line feed_, "nova linha"; em C: '\n' 
+    - 13 _Carriage return_, "retorno de carro", nem sempre é implementado; em C: '\r'
+      - No Windows, o '\n' é composto de 2 caracteres: 13 e 10
+  - 32, espaço em branco, ' '
+  - 48 a 57, algarismos de '0' a '9'
+  - 65 a 90, letras maiúsculas de 'A' a 'Z'
+  - 97 a 122, letras minúsculas de 'a' a 'z'
+  - Sinais de pontuação espalhados entre as faixas acima
+    - 127, o último código, é DEL ou ESC
