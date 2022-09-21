@@ -221,13 +221,14 @@ Um arquivo texto é caracterizado pela presença de uma variedade mais restrita 
    b = a;
 
    // Com strings, NÃO FUNCIONA:
-   char* s = "oi";
-   char t[256];
-   t = s; // COPIA APENAS O PONTEIRO , NÃO FAZ A CÓPIAS DOS CARACTERES UM A UM !!
+   char* v = "oi";
+   char w[256];
+   char* z = w;
+   z = v; // COPIA APENAS O PONTEIRO , NÃO FAZ A CÓPIAS DOS CARACTERES UM A UM !!
 
    // Em vez disso, deve-se fazer:
-   char* s2 = "oi";
-   char* t2;
+   char* s = "oi";
+   char* t;
    strcpy(t, s); // A STRING t RECEBE A CÓPIA CARACTER A CARACTER DE s
    // ========================================================================
    int c = 71;

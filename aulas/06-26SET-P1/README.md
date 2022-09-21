@@ -78,6 +78,7 @@ typedef struct {
      - `SMINT* soma(SMINT* a, SMINT* b)`
 
 4. Lib _string_
+
 Considere o seguinte programa:
 ```c
 #include <stdio.h>

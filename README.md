@@ -20,7 +20,7 @@
 - Aula 04 - 12/SET/2022 - Intro-a-arquivos + Libs-strings-frações-polinômios
 - Aula 05 - 19/SET/2022 - Continuação-de-arquivos
     - EX02: entrega em 26/SET/2022, tema: libs de frações e polinômios
-    - EX03: entrega em 03/OUT/2022, tema: myprintf
+    - EX03: entrega em **02**/OUT/2022, tema: myprintf
 - Aula 06 - 26/SET/2022 - Avaliação da I Unidade
 - Aula 07 - 03/OUT/2022 - 
 - Aula 08 - 10/OUT/2022 -
