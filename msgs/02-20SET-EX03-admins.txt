@@ -1,0 +1,30 @@
+Olá, 
+
+Diversas notícias:
+- Publiquei as notas da Aula 1 sobre representação em computação
+    Veja a pasta 01-22AGO na pasta `aulas`
+- Publiquei orientações e exercícios sobre esse assunto na P1
+    pasta 06-26SET-P1 em `aulas`
+- Publiquei o EX03 a ser entregue até 02/OUT
+
+Espero que o EX03 já apareça na dashboard do Github Classroom
+
+Em todo caso, encaminho os links do EX03, como usual:
+Integral : https://classroom.github.com/a/<...>
+Noturno  : https://classroom.github.com/a/<...>
+
+Links passados podem ser encontrados abaixo, para quem perdeu.
+
+Divulgue entre os colegas.
+
+Att.
+__
+
+EX02:
+Integral : https://classroom.github.com/a/<...> 
+Noturno  : https://classroom.github.com/a/<...>
+
+Página com todo material:
+https://github.com/aespiral/central-atp-ii-2022
+
+DICA!! Acione o botão WATCH deste repositório específico para receber notificações
