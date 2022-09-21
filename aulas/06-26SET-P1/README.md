@@ -36,8 +36,8 @@
 ## Exercícios de Revisão
 
 1. Sobre representação de dados em computação:
-   a. Sabe-se que um número inteiro sem sinal é representado na máquina de forma binária por questões de engenharia. Por que essa informação não é tão relevante na atividade de um programador no dia a dia?
-   b. Cite um exemplo de utilidade da representação `dec` de um valor do tipo MYUINT
-   c. Explique como é preenchida a representação `hex2display` no código de `myprintf`. Qual pode ser uma aplicação da representação `hex2display`?
-   d. Explique a frase: "Um caracter é um número como outro qualquer, mas também pode ter aspectos próprios."
-   e. Considere a situação: "Um programador usa um editor de arquivos binários para alterar dados de um arquivo. Ele decide visualizar os dados usando a representação decimal. Um colega sugere que a representação binária seria mais correta porque os computadores são binários. O programador não responde, apenas ri e pensa para si: 'decimal, hexadecimal, binária: tanto faz!' " Por que o programador está correto em usar a representação que mais lhe convém?
+   - Sabe-se que um número inteiro sem sinal é representado na máquina de forma binária por questões de engenharia. Por que essa informação não é tão relevante na atividade de um programador no dia a dia?
+   - Cite um exemplo de utilidade da representação `dec` de um valor do tipo MYUINT
+   - Explique como é preenchida a representação `hex2display` no código de `myprintf`. Qual pode ser uma aplicação da representação `hex2display`?
+   - Explique a frase: "Um caracter é um número como outro qualquer, mas também pode ter aspectos próprios."
+   - Considere a situação: "Um programador usa um editor de arquivos binários para alterar dados de um arquivo. Ele decide visualizar os dados usando a representação decimal. Um colega sugere que a representação binária seria mais correta porque os computadores são binários. O programador não responde, apenas ri e pensa para si: 'decimal, hexadecimal, binária: tanto faz!' " Por que o programador está correto em usar a representação que mais lhe convém?
