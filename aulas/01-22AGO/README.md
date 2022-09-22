@@ -252,3 +252,10 @@ Um arquivo texto é caracterizado pela presença de uma variedade mais restrita 
    strcat(u,v);   // u passa a valer "oi!!"
 
 ```
+## _Strings_ em C
+
+Uma _string_ em C é um array de caracteres imprimíveis seguidos por um caracter-de-fim-de-string, cujo valor é 0  (em C, há a representação alternatica '\0').
+
+Portanto, quando a alocação de memória é feita sob medida, é preciso solicitar um caracter a mais em relação ao número de caracteres visíveis da string.
+
+Todo percurso de string, portanto, tem de ser realizado com alguma MEF que busca também o fim-de-string.
