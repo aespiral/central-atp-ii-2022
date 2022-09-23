@@ -5,7 +5,8 @@ do Github Classroom:
 - FRAÇÕES (usada em aula como treino do Github)
 - ex02-prt-malloc (existe só para o noturno)
 
-<<<>>>
+Acrescentei notas de aulas sobre representação de memória, especialmente ponteiros.
+Há alguns exercícios a mais, inclusive nesse assunto.
 
 Links passados em mensagens anteriores podem ser encontrados abaixo, para quem perdeu.
 
