@@ -11,17 +11,17 @@
        - **Funções `strcpy`, `strcmp`, `strcat`**
      - ~~Técnica de MEF (Máquinas de Estados Finitos)~~
        - Será enfatizado nas avaliações P2 e P3
-2. _Aula 2_  ORIENTAÇÕES EM CONSTRUÇÃO A PARTIR DAQUI
-   - _Ponteiros_
-     - _Representação de números_ 
-     - _Tipos de ponteiros_
-     - _Desenho da memória_
-       - _Área estática_
-       - _Pilha_
-         - _Stack frame_
-     - _Aplicação_
-       - _Passagem de parâmetros por referência_ 
-3. _Aula 3_ 
+2. Aula 2
+   - Ponteiros
+     - Representação de números
+     - Tipos de ponteiros
+     - Desenho da memória
+       - Área estática
+       - Pilha
+         - Stack frame
+     - Aplicação
+       - Passagem de parâmetros por referência 
+3. _Aula 3_  ORIENTAÇÕES EM CONSTRUÇÃO A PARTIR DAQUI
    - _Alocação dinâmica_ 
      - _Tempo de vida_ 
      - _Heap_
@@ -104,3 +104,39 @@ Comente a afirmação: "É possível copiar uma string sem recorrer à bibliotec
 5. Representação
 Crie uma função para multiplicar um valor do tipo MYUINT por 10 usando exclusivamente a representação `dec`.
 - `MYUINT* vezes10(MYUINT* v);`
+
+6. Arquivos JSON
+
+O formato de arquivos JSON (_JavaScript Object Notation_) é amplamente usado na troca de informações entre páginas abertas em navegadores e seus respectivos servidores.
+
+O conteúdo de um arquivo JSON é mostrado aqui:
+```
+{ "idade" : 18,
+  "peso" : 70,
+  "altura" : 179}
+```
+Ao importar os dados do arquivo para a memória de um programa, os valores numéricos ali presentes precisam ser registrados em variáveis. Considerando variáveis do tipo MYUINT, que possuem diversas representações do mesmo número, da forma mais variada possível, e todas elas equivalentes entre si, é possível afirmar que os valores numéricos do arquivo JSON já se encontram completamente na **forma de uma das representações de MYUINT**. Comente.
+
+7. Considere o seguinte programa:
+```c
+void soma(int* total, int* dados, int tam){
+  int n;
+  int ptr_aux = dados;
+  *total = 0;
+  for(n=0; n<tam; n++) {
+    *total = *total + *ptr_aux;
+    ptr_aux = ptr_aux + 1;
+  }
+}
+int main() {
+  int ar[3];
+  int z;
+  int * p = &ar[0];
+  int i;
+  for(i=0; i<3; i++) {
+    *(p+i) = (i+3)*(i+3);
+  }
+  soma(&z, p, 3);
+}
+
+Mostre a representação esquemática de memória da execução desse programa no exato momento em que a função `soma` está para terminar. Use [uma página que ilustra a memória](mem.pdf).

@@ -1,0 +1,27 @@
+Olá, 
+
+Antes do assunto principal, quero lembrar que vou APAGAR algumas tarefas 
+do Github Classroom:
+- FRAÇÕES (usada em aula como treino do Github)
+- ex02-prt-malloc (existe só para o noturno)
+
+<<<>>>
+
+Links passados em mensagens anteriores podem ser encontrados abaixo, para quem perdeu.
+
+Divulgue entre os colegas, comente, pois nem todos conferem a caixa de e-mails.
+
+Att.
+Orlando
+
+===============================================================
+Página com notas de aula, e admin da disciplina:
+https://github.com/aespiral/central-atp-ii-2022
+(DICA: Acione o botão WATCH deste repositório específico para receber notificações)
+
+EX03:
+Integral : https://classroom.github.com/a/<<>>
+Noturno  : https://classroom.github.com/a/<<>>
+EX02:
+Integral : https://classroom.github.com/a/<<>> 
+Noturno  : https://classroom.github.com/a/<<>>

@@ -41,7 +41,7 @@ int main(int argc, char** argv){
   return 0;
 }
 ```
-Comentários sobre o arquivo [Aula-2-Mem_ria.pdf](Aula-2-Mem_oria.pdf), página a página:
+Comentários sobre o arquivo [Mem_Exec_Passo_A_Passo.pdf](Mem_Exec_Passo_A_Passo.pdf), página a página:
 1. Ponto de partida: a memória como uma tabela de endereços e conteúdos
    - A memória é representada esquematicamente como uma tabela
    - Há dois campos: endereços e conteúdos
@@ -50,7 +50,7 @@ Comentários sobre o arquivo [Aula-2-Mem_ria.pdf](Aula-2-Mem_oria.pdf), página 
      - É conveniente pela familiaridade
      - Quando a visualização dos bits é necessária, a representação hexadecimal tem vantagem
      - Obviamente, as representações numéricas são equivalentes, são todas corretas
-   - As [folhas de memória em branco](https://github.com/codfig/mem) podem ter alterações na quantidade de colunas, quantidade de células por colunas e faixas de endereço
+   - As [folhas de memória em branco](mem.pdf) podem ter alterações na quantidade de colunas, quantidade de células por colunas e faixas de endereço
 2.  Áreas da memória de um programa
     -   O primeiro passo é dermacar a memória em [3 áreas](https://en.wikipedia.org/wiki/Data_segment#Program_memory):
         -   Pilha (`.stack`)
@@ -118,4 +118,106 @@ Comentários sobre o arquivo [Aula-2-Mem_ria.pdf](Aula-2-Mem_oria.pdf), página 
         - 0 ou várias variáveis locais
 8.  A função `t` chama outra função, e aqui podemos observar o leiaute da pilha com 3 _stack frames_ simultâneos
 9.  De volta à `main` para terminar
+
+## Quantidade de memória ocupado pelos dados de acordo com seu tipo
+
+Cada tipo de dado prescreve um formato, e o tamanho é um aspecto primordial de qualquer formato
+
+Na representações esquemáticas de pilha, já se pode identificar que as variáveis ocupam quantidades de bytes diferentes, de acordo com o tipo
+
+Os tipos de dados em C têm afinidade com os próprios tipos definidos pelas arquiteturas modernas. O advento das arquiteturas de 64 bits alterou um pouco os conhecimentos estabelecidos na longa era dos 32 bits.
+
+1.  `char`
+    - 8 bits
+    - Embora o ASCII requeira 7 bits, costuma-se usar uma variante do ASCII de 8 bits, com caracteres estendidos. A arquitetura Intel contém nativamente um mapa de caracteres na sua BIOS, mas os sistemas operacionais o sobrescrevem com algum padrão mais usual: ISO8859, Unicode, etc.
+    - Mesmo em tempos de 64 bits, manteve-se em 8 bits
+2.  Inteiros
+    -   `short int`
+        -   Em 32 bits, requer 8 bits; em 64 bits, requer 16 bits
+        -   Para 8 bits, há 256 combinações
+            -   `unsigned short int` : inteiros sem sinal, de 0 a 255
+            -   `short int` apenas: inteiros com sinal, de -128 a 127
+    -   `int`
+        -   Em 32 bits, requer 16 bits, 65536 combinações
+            -   `unsigned int` : de 0 a 65535
+            -   `int` : -32768 a 32767
+    -   `long`
+        -   Em 32 bits, requer 32 bits, 4 gigacombinações (4 * 1024 * 1024 * 1024)
+            - `unsigned long`
+            - `long`
+3.  Reais
+    -   `float`
+        -   Sempre de 32 bits, segundo padrão IEEE, feito para baixa precisão
+    -   `double `
+        -   Precisão maior, favorecido atualmente, especialmente em novas linguagens de programação
+        -   64 ou 80 bits
+4.  Ponteiros
+    - `void*`, `int*`, `char*`, `float*`, `unsigned short int*`, etc.
+        -   SEMPRE do mesmo tamanho, ou seja, o tamanho de um endereço da arquitetura
+        -   Em 32 bits, são 32 bits
+
+## Ponteiros
+
+Uma variável qualquer pode ser acessada de duas formas num programa:
+- acesso pelo nome, que significa o conteúdo da variável ("o nome é o conteúdo"), seja para leitura ou escrita
+- acesso pelo operador & junto ao nome, que significa o endereço da variável, apenas para leitura
+
+Um ponteiro, sendo também uma variável, tem os dois acima; mas, além disso, todo ponteiro tem um 3o modo de acesso:
+- acesso pelo operador * junto ao nome, que significa **desreferenciamento**, seja para leitura ou escrita
+
+Resumo:
+- `p`
+- `&p`
+- `*p`
+
+### Lendo o signo `*` em programas
+
+Há duas situações em que o operador * é usado com ponteiros em C:
+- declaração de variáveis
+- sentenças em geral
+
+Em declarações de variáveis, o operador * **faz parte do tipo**, ou seja, é um modificador de tipo
+-   `int` e `int*`, por exemplo, são tipos totalmente diferentes
+-   `int *` poderia se chamar `int_ptr` (ponteiro de inteiro)
+-   Deixar um operador em separado é um "sintaxe esperta", muito útil em multideclarações, como no segundo exemplo abaixo
+-   Exemplos:
+    -   `int * p;`
+    -   `int i, j, *q, count, *ptr;`
+        - equivalente a 4 declarações, duas do tipo `int` e duas do tipo `int *`
+
+Em sentenças em geral, está a operação relevante proporcionada por ponteiros: o _desreferenciamento_
+
+Como ler `*p`?
+1.  Alguma variável da memória está sendo acessada: pode ser uma variável qualquer (desde que do tipo compatível)
+2.  Qual variável? Quem diz é `p`: `p` contém um endereço, e este endereço é o da variável a ser acessada
+3.  Dessa forma, a execução da expressão `*p` envolve **dois acessos à memória na mesma instrução**: primeiramente para ler o conteúdo de `p`, e, em seguida, partindo desse conteúdo como endereço de uma variável, a leitura/escrita que interessa
+
+```c
+    short int a = 0;
+    short int b[3] = {4, 50, 600};
+    int* ptr = &b[1];
+    int* q = &a;
+    printf("%d %d\n", *ptr, *q); // imprime 50 e 0
+```
+
+### Aritmética de ponteiros
+
+C segue uma filosofia pouco popular em linguagens de programação, que é permitir ao programador movimentar uma variável-ponteiro por meio de operações aritméticas em seu valor
+- Incrementar um ponteiro significa avançar nos endereços de memória de forma a apontar o que seria o endereço vizinho de uma variável do mesmo tipo
+- Decrementar é idêntico, exceto que na direção oposta
+- Somar um valor inteiro _n_ a um ponteiro equivale a fazer avançar o ponteiro em _n_ posições
+- Subtrair um valor inteiro é idêntico, exceto que na direção oposta
+
+```c
+    q = q + 1;
+    ptr = ptr - 1;
+    printf("%d %d", *ptr, *q, *(ptr+2)); // imprime 4, 4 e 600
+
+```
+Observe que é possível escrever expressões que modificam o endereço de leitura sem modificar o valor do ponteiro (como em `*(p+4)`)
+
+Avançar uma posição de um ponteiro de `char` causa uma movimentação de 1 byte, enquanto que um ponteiro de `int` avança 2 bytes (considerando compiladores antigos)
+    - **Essa é a razão primordial da existência de tipos diferentes de ponteiros**
+    - Os valores dos ponteiros em si não têm tipos, pois todos são endereços no mesmo espaço de memória
+
 
