@@ -118,3 +118,4 @@ Comentários sobre o arquivo [Aula-2-Mem_ria.pdf](Aula-2-Mem_oria.pdf), página 
         - 0 ou várias variáveis locais
 8.  A função `t` chama outra função, e aqui podemos observar o leiaute da pilha com 3 _stack frames_ simultâneos
 9.  De volta à `main` para terminar
+
