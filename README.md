@@ -19,10 +19,11 @@
 - Aula 03 - 05/SET/2022 - Alocação-de-memória + Github/Lib-frações
 - Aula 04 - 12/SET/2022 - Intro-a-arquivos + Libs-strings-frações-polinômios
 - Aula 05 - 19/SET/2022 - Continuação-de-arquivos
-    - EX02: entrega em 26/SET/2022, tema: libs de frações e polinômios
-    - EX03: entrega em **02**/OUT/2022, tema: myprintf
+    - EX02: entrega em ~~26/SET/2022~~ 10/OUT/2022, tema: libs de frações e polinômios
+    - EX03: entrega em ~~**02**/OUT/2022~~ 10/OUT/2022, tema: myprintf
 - Aula 06 - 26/SET/2022 - Avaliação da I Unidade
-- Aula 07 - 03/OUT/2022 - 
+- Aula 07 - 03/OUT/2022 - Arquivos binários; ordenação (algoritmos básicos)
+    - EX04: entrega em 10/OUT/2022, arquivos & MEF
 - Aula 08 - 10/OUT/2022 -
 - Aula 09 - 17/OUT/2022 -
 - Aula 10 - 24/OUT/2022 -
