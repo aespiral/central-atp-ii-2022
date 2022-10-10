@@ -24,7 +24,8 @@
 - Aula 06 - 26/SET/2022 - Avaliação da I Unidade
 - Aula 07 - 03/OUT/2022 - Arquivos binários; ordenação (algoritmos básicos)
     - EX04: entrega em 10/OUT/2022, arquivos & MEF
-- Aula 08 - 10/OUT/2022 -
+- Aula 08 - 10/OUT/2022 - Recursão em listas
+    - EX05: entrega em 17/OUT/2022
 - Aula 09 - 17/OUT/2022 -
 - Aula 10 - 24/OUT/2022 -
 - Aula 11 - 31/OUT/2022 - Avaliação da II Unidade
