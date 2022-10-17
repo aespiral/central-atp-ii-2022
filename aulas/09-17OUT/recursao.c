@@ -197,7 +197,7 @@ CEL* alternar(CEL* lst) {
 
 // substitui um valor por outro
 // subustituir 1 4 (3 2 1 2)   >>>  (3 2 4 2)
-CEL* substituir(CEL* lst) {
+CEL* substituir(int vai, int vem, CEL* lst) {
     return VAZIA;
 }
 
