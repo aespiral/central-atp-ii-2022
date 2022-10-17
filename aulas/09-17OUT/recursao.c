@@ -130,55 +130,32 @@ CEL* dobrar(CEL* lst) {
 // remover a primeira ocurrência
 // remover 3 (4 3 8 10 3 5 3)   >>>   (4 8 10 3 5 3)
 CEL* remover(int elem, CEL* lst) {
-    if (lst == VAZIA)
-        return VAZIA;
-    else if (elem == lst->p)
-        return lst->r;
-    else
-        return cons(lst->p, remover(elem, lst->r));
+    return VAZIA;
 }
 
 // remover todos
 // remover 3 (4 3 8 10 3 5 3)   >>>   (4 8 10 5)
 CEL* remover_todos(int elem, CEL* lst) {
-    if (lst == VAZIA)
-        return VAZIA;
-    else if (elem == lst->p)
-        return remover_todos(elem, lst->r);
-    else
-        return cons(lst->p, remover_todos(elem, lst->r));
+    return VAZIA;
 }
 
 // remover pares
 // remover_pares (4 3 8 10 3 5 3)   >>>   (4 8 10)
 CEL* remover_pares(CEL* lst) {
-    if (lst == VAZIA)
-        return VAZIA;
-    else if (lst->p%2==0)
-        return remover_pares(lst->r);
-    else
-        return cons(lst->p, remover_pares(lst->r));
+    return VAZIA;
 }
 
 // gaguinho (stammer)
 // gaguinho (7 4 3 0)    >>>>    (7 7 4 4 3 3 0 0)
 CEL* gaguinho(CEL* lst) {
-    if (lst == VAZIA)
-        return VAZIA;
-    else
-        return cons(lst->p, cons(lst->p, gaguinho(lst->r)));
+    return VAZIA;
 }
 
 // mantem posições ímpares
 // impares (2 10 5 4 0 1)   >>>  (2 5 0)
 // impares (1 2 3)    >>>  (1 3)
 CEL* impares(CEL* lst) {
-    if (lst == VAZIA)
-        return VAZIA;
-    else if (lst->r == VAZIA)
-        return lst;
-    else
-        return cons(lst->p, impares(lst->r->r));
+    return VAZIA;
 }
 
 // mantem posições pares
@@ -208,17 +185,16 @@ CEL* segue(int elem, CEL* lst) {
     return VAZIA; //TODO
 }
 
-// concatena duas listas recursivamente
-// (1 2 3)  (4 5)   >>>  (1 2 3 4 5)
-CEL* append(CEL* lst1, CEL* lst2) {
-    return VAZIA;
-}
-
 // combina duas listas, alternando os valores
 // (1 8 100) (9 3 2)    >>>    (1 9 8 3 100 2)
 // (4 10) (1 2 0 7)    >>>    (4 1 10 2 0 7)
 CEL* ziper(CEL* lst1, CEL* lst2) {
     return VAZIA;
+}
+
+// fatorial
+int fatorial(int n) {
+    return 0;
 }
 
 // mantém x elementos iniciais
@@ -231,11 +207,19 @@ CEL* drop(int n, CEL* lst) {
     return VAZIA;
 }
 
-int main() {
-    int a2[7] = {4, 10, 8, 16, 3, 50, 50};
-    CEL* lista2 = lista_de_array(a2, 7);
-    CEL* lista3 = impares(lista2);
-    mostra_lista(lista2);
-    mostra_lista(lista3);
+// concatena duas listas recursivamente
+// (1 2 3)  (4 5)   >>>  (1 2 3 4 5)
+CEL* append(CEL* lst1, CEL* lst2) {
+    return VAZIA;
+}
 
+int main() {
+    int in0[7] = {11, 12, 16, 20, 12, 13, 12};
+    int in1[3] = {30, 33, 40};
+    CEL* inlst0 = lista_de_array(in0, 7);
+    CEL* inlst1 = lista_de_array(in1, 3);
+    CEL* res = VAZIA; 
+    mostra_lista(inlst0);
+//    mostra_lista(inlst1);
+    mostra_lista(res);
 }
