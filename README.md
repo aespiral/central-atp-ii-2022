@@ -4,11 +4,10 @@
 ## Avaliação
 
 - E1 - Média dos exercícios - 5%
-- T1 - Projeto de programação 1 - 5%
-- T2 - Projeto de programação 2 - 5%
+- T1 - Projeto de programação 1 - 10%
 - P1 - Avaliação escrita da I Unidade - 20% - 26/SET/2022
-- P2 - Avaliação escrita da II Unidade - 25% - 31/OUT/2022
-- P3 - Avaliação escrita da III Unidade - 40% - 12/DEZ/2022
+- P2 - Avaliação escrita da II Unidade - 25% - OUT/NOV
+- P3 - Avaliação escrita da III Unidade - 40% - DEZ
 - Exame Final - 04/JAN/2023 (Quarta-feira)
 
 ## Calendário
