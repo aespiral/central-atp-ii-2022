@@ -25,14 +25,16 @@
 - Aula 07 - 03/OUT/2022 - Arquivos binários; ordenação (algoritmos básicos)
     - EX04: entrega em 10/OUT/2022, arquivos & MEF
 - Aula 08 - 10/OUT/2022 - Recursão em listas
-    - EX05: entrega em 17/OUT/2022
-- Aula 09 - 17/OUT/2022 -
-- Aula 10 - 24/OUT/2022 -
-- Aula 11 - 31/OUT/2022 - Avaliação da II Unidade
+- Aula 09 - 17/OUT/2022 - Recursão, parte II - construindo listas como resultado
+- Aula 10 - 24/OUT/2022 - Recursão, parte III - acumuladores
+
+O calendário prossegue no Google Classroom da disciplina.
+
+Dias sem aula:
 - SECCOMP - 07/NOV/2022 -
 - Feriado - 14/NOV/2022 -
-- Aula 12 - 21/NOV/2022 -
-- Aula 13 - 28/NOV/2022 -
-- Aula 14 - 05/DEZ/2022 -
-- Aula 15 - 12/DEZ/2022 - Avaliação da III Unidade
+
+Jogos do Brasil na Copa
+- 28/NOV, 13:00
+- 05/DEZ, 16:00
 
